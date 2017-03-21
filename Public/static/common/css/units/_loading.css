@@ -1,0 +1,38 @@
+.loading {
+  height: 100%;
+  min-height: 106px;
+  min-width: 106px;
+  margin: 0 auto;
+  text-align: center;
+  background: url(../img/loading.gif) 50% 50% no-repeat;
+}
+.data-empty-0 {
+  background: url(../img/empty-0.png) 50% 50% no-repeat;
+}
+.data-empty-1 {
+  background: url(../img/empty-1.png) 50% 50% no-repeat;
+}
+.data-empty-2 {
+  background: url(../img/empty-2.png) 50% 50% no-repeat;
+}
+.full-loading {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .loading {
+    background-size: 24px 24px;
+  }
+  .data-empty-0 {
+    background-size: 60px;
+  }
+  .data-empty-1 {
+    background-size: 100px;
+  }
+  .data-empty-2 {
+    background-size: 130px;
+  }
+}

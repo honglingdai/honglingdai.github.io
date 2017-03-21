@@ -1,0 +1,70 @@
+/*最小尺寸点*/
+@media screen and (min-width: 992px) {
+}
+/*最大尺寸点*/
+@media screen and (max-width: 1199px) {
+  .content {
+    width: 962px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  body {
+    background-color: #fff;
+  }
+  .inner-wall {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+  .panel-wall {
+    margin: 10px;
+  }
+  body .content-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #1499d2;
+    font-size: 18px;
+    text-align: center;
+  }
+  .content-mg {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .content {
+    width: 748px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer-wrap .footer {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .footer-wrap .footer a {
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 767px) {
+  .content {
+    width: 548px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 567px) {
+  /* layout */
+  .body-mb {
+    margin-bottom: 50px;
+  }
+  .content {
+    width: auto;
+  }
+  .paginator .btn {
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    margin: 0 0.1em;
+  }
+}

@@ -1,0 +1,22 @@
+.radio-beautify label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.radio-beautify label input[type="radio"],
+.radio-beautify label input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.radio-beautify label.checked {
+  color: #1499d2;
+  cursor: default;
+}
+.radio-beautify label.disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: not-allowed;
+}

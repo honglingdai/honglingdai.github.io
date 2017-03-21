@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7" lang="zh-CN"><![endif]-->
+<!--[if lte IE 8 ]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="阅卷系统，智能云阅卷，定制化答题卡，成绩分析">
+<meta name="description" content="一键提取试题，组卷完成可以直接导入阅卷系统 节省时间 高效办公；定制化答题卡，答题卡实现可视化编辑 适应任何样式的答题卡；扫描+阅卷系统智能扫描答题卡，云阅卷适应电脑、平板、手机，实现全网阅卷；成绩分析运用项目反映理论，独家分析特优生、临界生
+找到学习短板，帮助学生提高成绩">
+<meta name="viewport" content="width=1200">
+<meta id="_csrf" name="_csrf" content="{#$_csrf#}">
+    <title>未来脑智能教学云平台官网 - 首页</title>
+    <link rel="stylesheet" href="/Public/static/common/css/base-analy.css">
+    <link rel="stylesheet" href="/Public/static/analy/css/analy.css">
+
+    <!--[if lte IE 8]>
+<script src="/Public/static/lib/html5shiv/dist/html5shiv.min.js"></script>
+<script src="/Public/static/lib/respond/dest/respond.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        var myChart;
+        var OP_CONF = {
+            "modu": "analy",
+            "page": "xz-zong-gaikuang"
+        };
+    </script>
+</head>
+
+<body class="no-mobile">
+<div class="header-wrap">
+    <div class="content header clearfix">
+        <!--<span id="nav-toggle" class="nav-toggle"><span></span><span></span><span></span></span>-->
+        <div class="logo"><a href="/Analysis/Index/index.html"><img src="/Public/static/common/img/logo.png" alt=""/> <span class="sub-logo">成绩分析系统</span></a></div>
+        <!--<ul class="header-nav">-->
+            <!--<li><a href="./task.html">试题评阅</a></li>-->
+        <!--</ul>-->
+        <div class="user-login" id="user-login-state">
+            <div class="isLogin" style="display:none">
+                <span class="dib va-t"><i class="iconfont user-icon">&#xe602;</i>您好！<span class="user-name mr5">...</span><sup class="arrow-icon"></sup></span>
+                <!--<a class="dib va-t user-exit-icon" href="javascript:;" id="login-out">退出 <i class="iconfont exit-icon">&#xe637;</i></a>-->
+                <ul class="user-menu-list">
+                    <li><a href="/Analysis/Index/messages.html" class="pos-r"><i class="iconfont um-xiaoxi-ico">&#xe619;</i>系统消息 <sup>1</sup></a></li>
+                    <li><a id="login-out" href="javascript:;"><i class="iconfont um-exit-ico">&#xe637;</i>退出登录</a></li>
+                </ul>
+            </div>
+            <div class="isExit" style="display:none">
+                <a class="" href="">登录 <i class="iconfont">&#xe647;</i></a>
+            </div>
+        </div>
+        <!--<div class="mask-layer" id="mask-layer" role="遮罩层"></div>-->
+    </div>
+</div>
+
+<div class="crumbs-wrap">
+    <div class="crumbs content" id="j_main-crumbs">
+        <!--<cite>当前位置：</cite>-->
+        <a href="">首页</a>
+        <i class="icon">/</i>
+        <a href="">...</a>
+        <i class="icon">/</i>
+        <span id="crumbs_on">...</span>
+    </div>
+</div>
+<div class="content mb30">
+    <div class="analy-lay">
+
+        <div class="analy-head">
+            <div class="head-nav">
+    <a class="tab-itm" href="/Analysis/Region/xianji.html" data-href="xianji">县级主管报告</a>
+    <a class="tab-itm" href="/Analysis/Region/xiaoji_gaikuang.html" data-href="xiaoji_gaikuang&xiaoji_miaoshu&xiaoji_shangxian&xiaoji_chengji&xiaoji_xueqing">校级主管报告</a>
+    <a class="tab-itm" href="/Analysis/Region/xiaqu_gaikuang.html" data-href="xiaqu_gaikuang&xiaqu_miaoshu&xiaqu_shangxian&xiaqu_chengji&xiaqu_xueqing">辖区学校报告</a>
+    <a class="tab-itm" href="/Analysis/Region/mingtizhiliang.html" data-href="mingtizhiliang">命题质量报告</a>
+    <a class="go-back" href="/Analysis/Index/index.html">返回考试列表</a>
+    <a class="change-iden" id="change-ident" style="display:none"><i class="iconfont">&#xe663;</i>切换身份</a>
+</div>
+            <div class="head-body">
+                <!--报告头部-->
+                <div class="clearfix">
+    <div class="fl">
+    <h2 id="j_exam-title">
+        <b>...</b>
+    </h2>
+    <p id="j_exam-item">
+        <!--<span class="desc-item">考试创建时间：<em class="j_exam-time">...</em></span>-->
+        <!--<span class="desc-item">班级：<em class="j_exam-banji">...</em></span>-->
+        <!--<span class="desc-item">年级：<em class="j_exam-nianji">...</em></span>-->
+        <!--<span class="desc-item">学校：<em class="j_exam-school">...</em></span>-->
+        <!--<span class="desc-item">区域：<em class="j_exam-region">...</em></span>-->
+    </p>
+</div>
+    <div class="fr">
+    <p class="report-top-header">
+        <!--<a class="btn btn-primary report-btn" href=""><i class="iconfont">&#xe63e;</i>班级学科报告</a>-->
+        <a class="btn btn-primary report-btn btn-disabled" id="report-pdf"><i class="iconfont">&#xe668;</i>区域报告</a>
+    </p>
+    <p class="report-top-info"><a class="dib j_pdf-alert mr2" href="javascript:;">PDF文件打不开</a></p>
+</div>
+</div>
+                <div class="class-filter clearfix">
+    <div class="fl">
+        <!--<ul class="filter-item mb10 " id="qy-xiaoqu-school">-->
+    <!--&lt;!&ndash;<li><a>...</a></li>&ndash;&gt;-->
+    <!--<li class="category-name"><b>区域学校：</b></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市十三中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市二十八中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市二十八中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市二十八中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市十三中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市十三中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+    <!--<li><a>开封市七中</a></li>-->
+<!--</ul>-->
+
+<div class="filter-item mb10" id="qy-xiaoqu-item">
+    <!--<div class="category-name school-name"><b>区域学校：</b></div>-->
+    <!--<ul class="school-item"  id="qy-xiaoqu-school">-->
+        <!--<li class="on"><a>开封市七中</a></li>-->
+        <!--<li><a>开封市十三中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市二十八中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市二十八中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市二十八中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市十三中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市十三中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+        <!--<li><a>开封市七中</a></li>-->
+    <!--</ul>-->
+    <!--<div  class="school-more">-->
+        <!--<a href="" data-on="0">更多>></a>-->
+    <!--</div>-->
+</div>
+        <ul class="filter-item mb10" id="j_filter-fenlei">
+    <li class="category-name"><b>分析类别：</b></li>
+    <li><a href="/Analysis/Region/xiaqu_gaikuang.html" data-target="xiaqu_gaikuang">考试概括</a></li>
+    <li><a class="" href="/Analysis/Region/xiaqu_miaoshu.html" data-target="xiaqu_miaoshu">描述性统计</a></li>
+    <li><a href="/Analysis/Region/xiaqu_shangxian.html" data-target="xiaqu_shangxian">上线情况</a></li>
+    <li><a class="" href="/Analysis/Region/xiaqu_chengji.html" data-target="xiaqu_chengji">成绩分析</a></li>
+    <li><a href="/Analysis/Region/xiaqu_xueqing.html" data-target="xiaqu_xueqing">本校学情分析</a></li>
+</ul>
+    </div>
+    <a class="fr dib gaofen-paper btn btn-link text-primary" id="gaofen-paper"><i class="iconfont">&#xe66b;</i><br/>高分试卷</a>
+    <!--<link rel="import" href="/app/analy/view/include/page-head/gaofen-composition.tpl?__inline">-->
+</div>
+                <div class="summary">
+    <h2 class="result-tips"><b>导读</b></h2>
+    <p class="desc" id="j_desc"></p>
+</div>
+<div class="summary-hide">
+    <a class="summary-btn"><i class="iconfont">&#xe66c;</i></a>
+</div>
+            </div>
+        </div>
+
+        <div class="analy-body">
+            <!--命题质量概况-->
+            <div class="analy-lay-item mt30 j_output-excel-block">
+                <h4 class="head text-primary">
+                    <b>命题质量概况</b>
+                    <a class="output-excel disabled" href="javascript:;"><i class="iconfont">&#xe600;</i>导出Excel表格</a>
+                </h4>
+                <div class="item-body pt20">
+                    <table class="item-table-info table-fixed table table-bordered pct100" id="j_mingtizhiliang">
+                        <tr>
+                            <td>
+                                <p class="loading"></p>
+                            </td>
+                        </tr>
+                        <!--<tr>-->
+                        <!--<td><p class="loading"></p></td>-->
+                        <!--</tr>-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                        <!--<th><b>分析指标</b></th>-->
+                        <!--<th><b>语文</b></th>-->
+                        <!--<th><b>数学</b></th>-->
+                        <!--<th><b>英语</b></th>-->
+                        <!--<th><b>物理</b></th>-->
+                        <!--<th><b>化学</b></th>-->
+                        <!--<th><b>生物</b></th>-->
+
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                        <!--<tr>-->
+                        <!--<td><b>试卷信度</b></td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<tr>-->
+                        <!--<td><b>试卷难度</b></td>-->
+                        <!--<td>中等</td>-->
+                        <!--<td>中等</td>-->
+                        <!--<td>中等</td>-->
+                        <!--<td>中等</td>-->
+                        <!--<td>中等</td>-->
+                        <!--<td>中等</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td><b>试卷区分度</b></td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--<td>0.7</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td><b>满分人数</b></td>-->
+                        <!--<td>20</td>-->
+                        <!--<td>20</td>-->
+                        <!--<td>20</td>-->
+                        <!--<td>20</td>-->
+                        <!--<td>20</td>-->
+                        <!--<td>20</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td><b>命题评价</b></td>-->
+                        <!--<td>7</td>-->
+                        <!--<td>7</td>-->
+                        <!--<td>7</td>-->
+                        <!--<td>7</td>-->
+                        <!--<td>7</td>-->
+                        <!--<td>7</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                    </table>
+                </div>
+            </div>
+            <!--分数段-->
+            <div class="analy-lay-item mt30 j_output-excel-block">
+                <h4 class="head text-primary">
+                    <b>分数段</b>
+                    <a class="output-excel disabled" href="javascript:;"><i class="iconfont">&#xe600;</i>导出Excel表格</a>
+                </h4>
+
+                <div class="item-body pt20">
+                    <p class="pb20 fw6" id="j_fenshuduanDesc"></p>
+                    <!--分数段-->
+<script type="text/html" id="tpl_fenshuduan">
+    <thead>
+    {{if SubjectID === (1||2||3)}}
+    <tr>
+        <th rowspan="2"><b>分数段</b></th>
+        <th colspan="2"><b>150-130</b></th>
+        <th colspan="2"><b>120-110</b></th>
+        <th colspan="2"><b>110-100</b></th>
+        <th colspan="2"><b>100-90</b></th>
+        <th colspan="2"><b>90-80</b></th>
+        <th colspan="2"><b>80-70</b></th>
+        <th colspan="2"><b>70-60</b></th>
+        <th colspan="2"><b>60-50</b></th>
+        <th colspan="2"><b>50-40</b></th>
+        <th colspan="2"><b>40-30</b></th>
+        <th colspan="2"><b>30-20</b></th>
+        <th colspan="2"><b>20-10</b></th>
+    </tr>
+    <tr>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+    </tr>
+    {{else}}
+    <tr>
+        <th rowspan="2"><b>分数段</b></th>
+        <th colspan="2"><b>100-90</b></th>
+        <th colspan="2"><b>90-80</b></th>
+        <th colspan="2"><b>80-70</b></th>
+        <th colspan="2"><b>70-60</b></th>
+        <th colspan="2"><b>60-50</b></th>
+        <th colspan="2"><b>50-40</b></th>
+        <th colspan="2"><b>40-30</b></th>
+        <th colspan="2"><b>30-20</b></th>
+        <th colspan="2"><b>20-10</b></th>
+        <th colspan="2"><b>10-0</b></th>
+    </tr>
+    <tr>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+        <th><b>本校</b></th>
+        <th><b>本班</b></th>
+    </tr>
+    {{/if}}
+    </thead>
+    <tbody>
+    <tr>
+        <td><b>人数</b></td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td><b>人数累积</b></td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td><b>百分比%</b></td>
+        <td>9%</td>
+        <td>9%</td>
+        <td>9%</td>
+        <td>9%</td>
+        <td>9%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+        <td>10%</td>
+        <td>9%</td>
+    </tr>
+    </tbody>
+</script>
+<table class="item-tables-info table-fixed table table-bordered pct100 item-table-compact" id="j_fenshuduan">
+    <tr>
+        <td>
+            <p class="loading"></p>
+        </td>
+    </tr>
+    <!--<thead>-->
+    <!--<tr>-->
+    <!--<th rowspan="2"><b>分数段</b></th>-->
+    <!--<th colspan="2"><b>100-90</b></th>-->
+    <!--<th colspan="2"><b>90-80</b></th>-->
+    <!--<th colspan="2"><b>80-70</b></th>-->
+    <!--<th colspan="2"><b>70-60</b></th>-->
+    <!--<th colspan="2"><b>60-50</b></th>-->
+    <!--<th colspan="2"><b>50-40</b></th>-->
+    <!--<th colspan="2"><b>40-30</b></th>-->
+    <!--<th colspan="2"><b>30-20</b></th>-->
+    <!--<th colspan="2"><b>20-10</b></th>-->
+    <!--<th colspan="2"><b>10-0</b></th>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--<th><b>本校</b></th>-->
+    <!--<th><b>本班</b></th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr>-->
+    <!--<td><b>人数</b></td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td><b>人数累积</b></td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--<td>100</td>-->
+    <!--<td>10</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td><b>百分比%</b></td>-->
+    <!--<td>9%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--<td>10%</td>-->
+    <!--<td>9%</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+</table>
+<div class="echarts pt10" id="chart_fenshuduan"></div>
+                </div>
+            </div>
+            <!--<link rel="import" href="/app/analy/view/include/laoshi-gaikuang-xiaojie.tpl?__inline"/>-->
+        </div>
+    </div>
+</div>
+<div class="sidebar-tool-wrap">
+    <div class="sidebar-tool">
+        <ul class="func-list">
+            <li class="item1">
+                <a href="javascript:;"><span class="tips-title">在线<br/>客服</span></a>
+                <div class="service-tell">
+                    <div class="icon">客服电话</div>
+                    <p><b>400-0371-657</b></p>
+                </div>
+            </li>
+            <li class="item2"><a href="javascript:;" id="feedback"><span class="tips-title">用户<br/>反馈</span></a></li>
+            <li class="item3">
+                <a href="javascript:;"><span class="tips-title">下载<br/>体验</span></a>
+                <div class="show-ewm clearfix">
+                    <ul class="app-ewm">
+                        <li>
+                            <img src="/Public/static/analy/img/sidebar/ewm.png" alt="安卓版下载"/>
+                            <p>Android下载</p>
+                        </li>
+                        <li>
+                            <img src="/Public/static/analy/img/sidebar/ewm.png" alt="IOS版下载"/>
+                            <p>IOS下载</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item4" id="goTop"><a href="#"><span class="tips-title" >返回<br/>顶部</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-wrap">
+    <div class="footer content">
+        <div class="copyright">
+    <span class="arial">© </span> 2016 河南天星教育传媒股份有限公司 <a href="http://www.wln100.com">wln100.com</a> All rights reserved
+    <a id="anbei" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41019702002013">豫公网安备 41019702002013号</a>
+    <br>
+    <a href="http://www.miitbeian.gov.cn/">增值电信业务经营许可证：豫B2-20130009</a>
+</div>
+        <div class="anquan" style="display:none">
+    <a target="_blank" key="56569cbdefbfb058f9d81d7e" logo_size="83x30" logo_type="business" href="http://www.anquan.org/authenticate/cert/?site=www.wln100.com&amp;at=business">
+        <img alt="安全联盟认证" style="border: medium none;" src="http://static.anquan.org/static/outer/image/hy_83x30.png" height="30" width="83"></a>
+</div>
+    </div>
+</div>
+<script type="text/javascript" src="/Public/static/sea.js"></script>
+<script type="text/javascript" src="/Public/static/seajs_config.js"></script>
+<script type="text/javascript">
+    seajs.use( "/Public/static/" + OP_CONF.modu +"/js/"+ OP_CONF.page);
+</script>
+</body>
+</html>

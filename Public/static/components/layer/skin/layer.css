@@ -1,0 +1,618 @@
+/*!
+ 
+ @Name: layer's style
+ @Author: 贤心
+ @Blog： sentsin.com
+ 
+ */
+*html {
+    background-image: url(about:blank);
+    background-attachment: fixed
+}
+html #layui_layer_skinlayercss {
+    display: none;
+    position: absolute;
+    width: 1989px
+}
+.layui-layer, .layui-layer-shade {
+    position: fixed;
+    _position: absolute;
+    pointer-events: auto
+}
+.layui-layer-shade {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    _height: expression(document.body.offsetHeight+"px")
+}
+.layui-layer {
+    top: 150px;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border-radius:2px;
+    -webkit-background-clip: content;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .3);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: .25s;
+    animation-duration: .25s
+}
+.layui-layer-close {
+    position: absolute
+}
+.layui-layer-content {
+    position: relative
+}
+.layui-layer-border {
+    border: 1px solid #B2B2B2;
+    border: 1px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .3)
+}
+.layui-layer-moves {
+    position: absolute;
+    border: 3px solid #666;
+    border: 3px solid rgba(0, 0, 0, .5);
+    cursor: move;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .3);
+    filter: alpha(opacity=50)
+}
+.layui-layer-load {
+    background: url(/Public/static/components/layer/skin/default/loading-0.gif) center center no-repeat #fff
+}
+.layui-layer-ico {
+    background: url(/Public/static/components/layer/skin/default/icon1.png) no-repeat
+}
+.layui-layer-btn a, .layui-layer-dialog .layui-layer-ico, .layui-layer-setwin a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: top
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9)
+    }
+    50% {
+        opacity: 1
+    }
+}
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.8, .8, .8);
+        transform: scale3d(.8, .8, .8)
+    }
+    65% {
+        -webkit-transform: scale3d(1.02, 1.02, 1.02);
+        transform: scale3d(1.02, 1.02, 1.02)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+.layui-anim {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s
+}
+@-webkit-keyframes zoomOut {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(.94 ,.94 ,.94);
+        transform: scale3d(.94 ,.94 ,.94)
+    }
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes zoomOut {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(.94 ,.94 ,.94);
+        -ms-transform: scale3d(.94 ,.94 ,.94);
+        transform: scale3d(.94 ,.94 ,.94)
+    }
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.layui-anim-close {
+    -webkit-animation-name: zoomOut;
+    animation-name: zoomOut;
+    -webkit-animation-duration: .18s;
+    animation-duration: .18s
+}
+@-webkit-keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.1) translateY(-2000px);
+        transform: scale(.1) translateY(-2000px);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(.475) translateY(60px);
+        transform: scale(.475) translateY(60px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+    }
+}
+@keyframes zoomInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.1) translateY(-2000px);
+        -ms-transform: scale(.1) translateY(-2000px);
+        transform: scale(.1) translateY(-2000px);
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(.475) translateY(60px);
+        -ms-transform: scale(.475) translateY(60px);
+        transform: scale(.475) translateY(60px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out
+    }
+}
+.layui-anim-01 {
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown
+}
+@-webkit-keyframes zoomInBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@keyframes zoomInBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+.layui-anim-02 {
+    -webkit-animation-name: zoomInBig;
+    animation-name: zoomInBig
+}
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20%, 0);
+        transform: translate3d(0, -20%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+.layui-anim-03 {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown
+}
+@-webkit-keyframes rollIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%) rotate(-120deg);
+        transform: translateX(-100%) rotate(-120deg)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) rotate(0);
+        transform: translateX(0) rotate(0)
+    }
+}
+@keyframes rollIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%) rotate(-120deg);
+        -ms-transform: translateX(-100%) rotate(-120deg);
+        transform: translateX(-100%) rotate(-120deg)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) rotate(0);
+        -ms-transform: translateX(0) rotate(0);
+        transform: translateX(0) rotate(0)
+    }
+}
+.layui-anim-04 {
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+.layui-anim-05 {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn
+}
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+.layui-anim-06 {
+    -webkit-animation-name: shake;
+    animation-name: shake
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+.layui-layer-title {
+    -webkit-box-sizing:content-box;
+    box-sizing:content-box;
+    padding: 0 90px 0 20px;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    border-radius:2px 2px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #FBFBFB
+}
+.layui-layer-setwin {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 0;
+    line-height: initial
+}
+.layui-layer-setwin a {
+    -webkit-box-sizing:content-box;
+    box-sizing:content-box;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 7px solid #FBFBFB;    /*margin-left: 10px;*/
+    font-size: 12px;
+    _overflow: hidden
+}
+.layui-layer-setwin a:active {
+    background-color: #eee;
+    border-color: #eee;
+}
+.layui-layer-setwin .layui-layer-min cite {
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    margin-top: -1px;
+    margin-left: -7px;
+    background-color: #2E2D3C;
+    cursor: pointer;
+    _overflow: hidden
+}
+.layui-layer-setwin .layui-layer-min:hover cite {
+    background-color: #2D93CA
+}
+.layui-layer-setwin .layui-layer-max {
+    background-position: -51px -33px
+}
+.layui-layer-setwin .layui-layer-max:hover {
+    background-position: -21px -33px
+}
+.layui-layer-setwin .layui-layer-maxmin {
+    background-position: -111px -33px
+}
+.layui-layer-setwin .layui-layer-maxmin:hover {
+    background-position: -81px -33px
+}
+.layui-layer-setwin .layui-layer-close1 {
+    border-radius:0 2px 0 0;
+    background-position: 9px -33px
+}
+.layui-layer-setwin .layui-layer-close1:hover {
+    opacity: .7
+}
+.layui-layer-setwin .layui-layer-close2 {
+    position: absolute;
+    right: -30px;
+    top: -31px;
+    width: 29px;
+    height: 29px;
+    margin-left: 0;
+    background-position: -151px -31px;
+    *right: -18px;
+    _display: none
+}
+.layui-layer-setwin .layui-layer-close2:hover {
+    background-position: -182px -31px
+}
+.layui-layer-btn {
+    text-align: right;
+    padding: 0 15px 15px;
+    pointer-events: auto;
+    -webkit-user-select: none;
+}
+.layui-layer-btn a {
+    height: 28px;
+    line-height: 28px;
+    margin: 0 5px;
+    padding: 0 15px;
+    border: 1px solid #dedede;
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none
+}
+.layui-layer-btn a:hover {
+    opacity: .9;
+    text-decoration: none
+}
+.layui-layer-btn a:active {
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.18);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.18);
+}
+.layui-layer-btn .layui-layer-btn0 {
+    border-color: #04A2E9;
+    background-color: #04A2E9;
+    color: #fff
+}
+.layui-layer-dialog {
+    min-width: 260px
+}
+.layui-layer-dialog .layui-layer-content {
+    position: relative;
+    padding: 20px;
+    line-height: 24px;
+    word-break: break-all;
+    font-size: 14px;
+    overflow: auto
+}
+.layui-layer-dialog .layui-layer-content .layui-layer-ico {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    _left: -40px;
+    width: 30px;
+    height: 30px
+}
+.layui-layer-ico1 {
+    background-position: -30px 0
+}
+.layui-layer-ico2 {
+    background-position: -60px 0
+}
+.layui-layer-ico3 {
+    background-position: -90px 0
+}
+.layui-layer-ico4 {
+    background-position: -120px 0
+}
+.layui-layer-ico5 {
+    background-position: -150px 0
+}
+.layui-layer-ico6 {
+    background-position: -180px 0
+}
+.layui-layer-rim {
+    border: 6px solid #8D8D8D;
+    border: 6px solid rgba(0, 0, 0, .3);
+    border-radius: 2px;
+    box-shadow: none
+}
+.layui-layer-msg {
+    min-width: 180px;
+    border-radius:2px;
+    border: 1px solid #D3D4D3;
+    box-shadow:0 0 6px rgba(0,0,0,.2);
+}
+.layui-layer-hui {
+    min-width: 100px;
+    background-color: #000;
+    filter: alpha(opacity=60);
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+    border: none
+}
+.layui-layer-hui .layui-layer-content {
+    padding: 12px 25px;
+    text-align: center
+}
+.layui-layer-dialog .layui-layer-padding {
+    padding: 20px 20px 20px 55px;
+    text-align: left
+}
+.layui-layer-page .layui-layer-content {
+    position: relative;
+    overflow: auto
+}
+.layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn {
+    padding-top: 15px
+}
+.layui-layer-nobg {
+    background: 0 0
+}
+.layui-layer-iframe .layui-layer-content {
+    overflow: hidden
+}
+.layui-layer-iframe iframe {
+    display: block;
+    width: 100%
+}
+.layui-layer-loading {
+    border-radius: 100%;
+    background: 0 0;
+    box-shadow: none;
+    border: none
+}
+.layui-layer-loading .layui-layer-content {
+    width: 60px;
+    height: 24px;
+    background: url(/Public/static/components/layer/skin/default/loading-0.gif) no-repeat
+}
+.layui-layer-loading .layui-layer-loading1 {
+    width: 37px;
+    height: 37px;
+    background: url(/Public/static/components/layer/skin/default/loading-1.gif) no-repeat
+}
+.layui-layer-ico16, .layui-layer-loading .layui-layer-loading2 {
+    width: 32px;
+    height: 32px;
+    background: url(/Public/static/components/layer/skin/default/loading-2.gif) no-repeat
+}
+.layui-layer-tips {
+    background: 0 0;
+    box-shadow: none;
+    border: none
+}
+.layui-layer-tips .layui-layer-content {
+    position: relative;
+    line-height: 22px;
+    min-width: 12px;
+    padding: 3px 10px;
+    font-size: 12px;
+    _float: left;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .175);
+    background-color: #000;
+    color: #fff
+}
+.layui-layer-tips .layui-layer-close {
+    right: -2px;
+    top: -1px
+}
+.layui-layer-tips i.layui-layer-TipsG {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-color: transparent;
+    border-style: dashed;
+    *overflow: hidden
+}
+.layui-layer-tips i.layui-layer-TipsB, .layui-layer-tips i.layui-layer-TipsT {
+    left: 5px;
+    border-right-style: solid;
+    border-right-color: #000
+}
+.layui-layer-tips i.layui-layer-TipsT {
+    bottom: -8px
+}
+.layui-layer-tips i.layui-layer-TipsB {
+    top: -8px
+}
+.layui-layer-tips i.layui-layer-TipsL, .layui-layer-tips i.layui-layer-TipsR {
+    top: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000
+}
+.layui-layer-tips i.layui-layer-TipsR {
+    left: -8px
+}
+.layui-layer-tips i.layui-layer-TipsL {
+    right: -8px
+}
+.layui-layer-lan[type=dialog] {
+    min-width: 280px
+}
+.layui-layer-lan .layui-layer-title {
+    background: #4476A7;
+    color: #fff;
+    border: none
+}
+.layui-layer-lan .layui-layer-btn {
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #E9E7E7
+}
+.layui-layer-lan .layui-layer-btn a {
+    background: #BBB5B5;
+    border: none
+}
+.layui-layer-lan .layui-layer-btn .layui-layer-btn1 {
+    background: #C9C5C5
+}
+.layui-layer-molv .layui-layer-title {
+    background: #009f95;
+    color: #fff;
+    border: none
+}
+.layui-layer-molv .layui-layer-btn a {
+    background: #009f95
+}
+.layui-layer-molv .layui-layer-btn .layui-layer-btn1 {
+    background: #92B8B1
+}

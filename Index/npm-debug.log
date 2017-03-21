@@ -1,0 +1,53 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '–g',
+1 verbose cli   'gulp--registry=https://registry.npm.taobao.org' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose install initial load of E:\weilainao\marking\package.json
+5 warn package.json marking@0.0.1 No repository field.
+6 warn package.json marking@0.0.1 No README data
+7 verbose installManyTop reading scoped package data from E:\weilainao\marking\node_modules\express\package.json
+8 verbose installManyTop reading scoped package data from E:\weilainao\marking\node_modules\hbs\package.json
+9 verbose installManyTop reading scoped package data from E:\weilainao\marking\node_modules\http-proxy\package.json
+10 verbose installManyTop reading scoped package data from E:\weilainao\marking\node_modules\path\package.json
+11 verbose installManyTop reading scoped package data from E:\weilainao\marking\node_modules\request\package.json
+12 info package.json path@0.12.7 path is also the name of a node core module.
+13 verbose readDependencies loading dependencies from E:\weilainao\marking\package.json
+14 silly cache add args [ '–g', null ]
+15 verbose cache add spec –g
+16 silly cache add args [ 'gulp--registry=https://registry.npm.taobao.org', null ]
+17 verbose cache add spec gulp--registry=https://registry.npm.taobao.org
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: '–g',
+18 silly cache add   scope: null,
+18 silly cache add   name: null,
+18 silly cache add   rawSpec: '–g',
+18 silly cache add   spec: 'E:\\weilainao\\marking\\output\\–g',
+18 silly cache add   type: 'local' }
+19 silly cache add parsed spec Result {
+19 silly cache add   raw: 'gulp--registry=https://registry.npm.taobao.org',
+19 silly cache add   scope: null,
+19 silly cache add   name: null,
+19 silly cache add   rawSpec: 'gulp--registry=https://registry.npm.taobao.org',
+19 silly cache add   spec: 'E:\\weilainao\\marking\\output\\gulp--registry=https:\\registry.npm.taobao.org',
+19 silly cache add   type: 'local' }
+20 error addLocal Could not install E:\weilainao\marking\output\–g
+21 error addLocal Could not install E:\weilainao\marking\output\gulp--registry=https:\registry.npm.taobao.org
+22 verbose stack Error: ENOENT: no such file or directory, open 'E:\weilainao\marking\output\–g'
+22 verbose stack     at Error (native)
+23 verbose cwd E:\weilainao\marking\output
+24 error Windows_NT 6.1.7601
+25 error argv "D:\\Program Files\\nodejs\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "–g" "gulp--registry=https://registry.npm.taobao.org"
+26 error node v4.4.5
+27 error npm  v2.15.5
+28 error path E:\weilainao\marking\output\–g
+29 error code ENOENT
+30 error errno -4058
+31 error syscall open
+32 error enoent ENOENT: no such file or directory, open 'E:\weilainao\marking\output\–g'
+32 error enoent This is most likely not a problem with npm itself
+32 error enoent and is related to npm not being able to find a file.
+33 verbose exit [ -4058, true ]

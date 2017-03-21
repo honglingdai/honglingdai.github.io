@@ -1,0 +1,43 @@
+/* 班级 */
+/*功能面板*/
+.panel .panel-head {
+  border-bottom: 1px solid #bfbfbf;
+  line-height: 34px;
+  font-size: 18px;
+  padding: 1em 0;
+  *zoom: 1;
+}
+.panel .panel-head:after {
+  clear: both;
+  font-size: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  content: " ";
+  line-height: 0;
+}
+.panel .panel-name {
+  float: left;
+  font-weight: 400;
+  padding-right: 0.8em;
+  font-size: 1em;
+}
+.panel .panel-name .iconfont {
+  float: left;
+  padding-right: 0.2em;
+  color: #1499d2;
+  font-size: 1.6em;
+}
+.panel .panel-handle {
+  float: right;
+  font-size: 0.8em;
+}
+.panel .panel-handle .btn {
+  min-width: 4em;
+  line-height: 32px;
+  padding: 0 0.7em;
+  margin-left: 5px;
+}
+.panel .panel-handle .link {
+  color: #1499d2;
+}

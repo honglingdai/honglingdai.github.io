@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7" lang="zh-CN"><![endif]-->
+<!--[if lte IE 8 ]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no"/>
+<meta id="_csrf" name="_csrf" content="{#$_csrf#}">
+
+    <title>未来脑智能教学云平台-阅卷系统</title>
+    <link rel="stylesheet" href="/Public/static/common/css/base-review.css">
+    <link rel="stylesheet" href="/Public/static/review/css/progress.css">
+    <!--[if lte IE 8]>
+<script src="/Public/static/lib/html5shiv/dist/html5shiv.min.js"></script>
+<script src="/Public/static/lib/respond/dest/respond.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        var OP_CONF = {
+            "modu": "review",
+            "page": "progress"
+        };
+    </script>
+</head>
+
+<body>
+<div class="header-wrap">
+    <div class="content header clearfix">
+        <span id="nav-toggle" class="nav-toggle"><span></span><span></span><span></span></span>
+<div class="logo"><a href="/Review/Index/index.html"><img src="/Public/static/common/img/logo.png" alt=""/></a></div>
+        <ul class="header-nav">
+            <li><a href="/Review/Index/index.html">考试列表</a></li>
+            <li><a href="/Review/Index/mark.html">试题评阅</a></li>
+            <li><a href="/Review/Progress/progress.html">进度查询</a></li>
+            <li><a href="/Review/Review/review.html">试题自检</a></li>
+            <li><a href="/Review/Contrast/temp.html">样卷对比</a></li>
+            <li><a href="/Review/Standard/standard.html">评分标准</a></li>
+        </ul>
+        <div class="user-login" id="user-login-state">
+    <div class="isLogin" style="display:none">
+        <span class="dib va-t hidden-xs">您好！</span><span class="user-name elli  hidden-xs"></span>
+        <a class="dib va-t user-exit-icon" href="javascript:;" id="login-out">退出<i class="iconfont exit-icon">&#xe637;</i></a>
+    </div>
+    <div class="isExit" style="display:none">
+        <a class="" href="">登录 <i class="iconfont">&#xe647;</i></a>
+    </div>
+</div>
+        <div class="mask-layer" id="mask-layer" role="遮罩层"></div>
+
+    </div>
+</div>
+
+
+<div class="loading full-loading"></div>
+
+<div class="content content-mg">
+    <div class="exam-detail inner-wall bg-white">
+        <h2 class="content-title" id="j_contentTitle">...</h2>
+        <div class="ed-body">
+            <div class="ed-content clearfix">
+                <div class="ed-left">
+                    <h4 class="ed-l-title">阅卷进度</h4>
+                    <div class="ed-desc-info pt15" id="j_ed-desc-info">
+                        <p class="loading" style="height:200px;"></p>
+                    </div>
+                    <a class="btn btn-primary btn-lg btn-block mt20" href="">刷新</a>
+                </div>
+                <div class="ed-right">
+                    <div class="echart-item">
+                        <h4 class="text-primary fw4 fw">每日阅卷量统计</h4>
+                        <div class="echart" id="markingPaperTotal">
+                            <div class="loading"></div>
+                        </div>
+                    </div>
+                    <div class="echart-item mt20">
+                        <h4 class="text-primary fw4">分数分布统计</h4>
+                        <div class="echart" id="scoreLayoutTotal">
+                            <div class="loading"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <div class="footer-wrap">
+    <div class="footer content">
+        <div class="copyright">
+    <span class="arial">© </span> 2016 河南天星教育传媒股份有限公司 <a href="http://www.wln100.com">wln100.com</a> All rights reserved
+    <a id="anbei" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41019702002013">豫公网安备 41019702002013号</a>
+    <br>
+    <a href="http://www.miitbeian.gov.cn/">增值电信业务经营许可证：豫B2-20130009</a>
+</div>
+        <div class="anquan" style="display:none">
+    <a target="_blank" key="56569cbdefbfb058f9d81d7e" logo_size="83x30" logo_type="business" href="http://www.anquan.org/authenticate/cert/?site=www.wln100.com&amp;at=business">
+        <img alt="安全联盟认证" style="border: medium none;" src="http://static.anquan.org/static/outer/image/hy_83x30.png" height="30" width="83"></a>
+</div>
+    </div>
+</div>
+<script type="text/javascript" src="/Public/static/sea.js"></script>
+<script type="text/javascript" src="/Public/static/seajs_config.js"></script>
+<script type="text/javascript">
+    seajs.use( "/Public/static/" + OP_CONF.modu +"/js/"+ OP_CONF.page);
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/*行高*/
+/*空间隙*/
+.jd-kong-list {
+  overflow: hidden;
+}
+.jd-kong-list .jd-hang-item {
+  float: left;
+  display: inline-block;
+}
+.jd-kong-list .jd-hang-item.only-hang {
+  display: block;
+}
+.jd-kong-list .jd-kong-item {
+  float: left;
+  height: 48px;
+  overflow: hidden;
+}
+.jd-kong-list .jd-kong-item:after {
+  content: "";
+  height: 48px;
+  box-sizing: border-box;
+  display: block;
+  border-bottom: 1px solid #333;
+}
+.jd-kong-list .jd-kong-item.no-line:after {
+  border-bottom: 0;
+}
+.jd-kong-list .hang-has-img {
+  height: auto;
+}
+.jd-kong-list .hang-has-img:after {
+  border-bottom: 0;
+}
+.jd-kong-list .hang-has-img .jd-img-list {
+  float: left;
+  padding-top: 15px;
+}
+.jd-kong-list .hang-has-img .jd-img-list .img-item {
+  display: table-cell;
+  text-align: center;
+  font-size: 0;
+  vertical-align: middle;
+  height: 130px;
+  max-width: 180px;
+  position: relative;
+}
+.jd-kong-list .hang-has-img .jd-img-list .img-item:hover {
+  background-color: #f1f1f1;
+}
+.jd-kong-list .hang-has-img .jd-img-list .img-item:hover .del-img {
+  display: block;
+}
+.jd-kong-list .hang-has-img .jd-img-list .img-item .del-img {
+  font-size: 12px;
+  border-radius: 3px;
+  height: 16px;
+  line-height: 16px;
+  padding: 0 5px;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  color: #fff;
+  background-color: #e6a61e;
+}
+.jd-kong-list .hang-has-img .jd-img-list.big-block {
+  /*解答题配图*/
+  text-align: right;
+  float: right;
+}
+.jd-kong-list .hang-has-img .jd-img-list.big-block img {
+  max-width: 150px;
+  max-height: 110px;
+}
+.jd-kong-list .hang-has-img .jd-img-list .img-item-desc {
+  display: inline-block;
+  line-height: 1.8;
+  color: #555;
+  font-size: 12px;
+}
+.jd-kong-list .jd-order,
+.jd-kong-list .jd-sub {
+  float: left;
+  display: block;
+  width: 1.6em;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 28px;
+  background-color: #fff;
+}
+.jd-kong-list .jd-order {
+  font-size: 13px;
+}
+.jd-kong-list .jd-sub {
+  font-size: 12px;
+}
+/*A4 版*/
+.box-a4 .jd-kong-list .jd-kong-item:after {
+  margin: 0 15px;
+}
+.box-a4 .jd-kong-list .hang-has-img .jd-img-list .kong-img-1-3 img {
+  max-width: 199px;
+}
+.box-a4 .jd-kong-list .hang-has-img .jd-img-list .kong-img-1-1 img {
+  max-width: 631px;
+}
+.box-a4 .jd-kong-list .hang-has-img .jd-img-list .kong-img-1-2 img {
+  max-width: 307px;
+}
+.box-a4 .jd-kong-list .hang-1-3 {
+  width: 214px;
+}
+.box-a4 .jd-kong-list .hang-1-1 {
+  width: 646px;
+}
+.box-a4 .jd-kong-list .hang-1-2 {
+  width: 322px;
+}
+/*A3 版*/
+.box-a3 .jd-kong-list .jd-kong-item:after {
+  margin: 0 11px;
+}
+.box-a3 .jd-kong-list .hang-has-img .jd-img-list .kong-img-1-3 img {
+  max-width: 130px;
+}
+.box-a3 .jd-kong-list .hang-has-img .jd-img-list .kong-img-1-1 img {
+  max-width: 411px;
+}
+.box-a3 .jd-kong-list .hang-has-img .jd-img-list .kong-img-1-2 img {
+  max-width: 200px;
+}
+.box-a3 .jd-kong-list .hang-1-3 {
+  width: 141px;
+}
+.box-a3 .jd-kong-list .hang-1-1 {
+  width: 422px;
+}
+.box-a3 .jd-kong-list .hang-1-2 {
+  width: 211px;
+}
+.jd-hang-item {
+  position: relative;
+}
+.jd-hang-item .ques-handle-group {
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+  top: 28px;
+  font-size: 12px;
+}
+.jd-hang-item .ques-handle-group .btn {
+  float: left;
+  line-height: 20px;
+  height: 20px;
+  padding: 0 4px;
+  margin-right: 1px;
+  color: #fff;
+  background: #ff8449;
+  border-radius: 1px;
+}

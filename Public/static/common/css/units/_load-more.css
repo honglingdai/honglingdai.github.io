@@ -1,0 +1,8 @@
+.load-more {
+  padding: 2em 0;
+}
+.load-more a {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+}

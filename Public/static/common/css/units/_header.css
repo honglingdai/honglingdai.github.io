@@ -1,0 +1,172 @@
+.header-wrap {
+  position: relative;
+  z-index: 100;
+  background-color: #1499d2;
+}
+.header {
+  position: relative;
+  z-index: 0;
+}
+.header .logo {
+  float: left;
+  height: 70px;
+}
+.header .logo img {
+  padding-top: 10px;
+}
+.header .logo .sub-logo {
+  float: right;
+  color: #fff;
+  margin-top: 18px;
+  line-height: 1.4;
+  font-size: 22px;
+  font-weight: 300;
+  border-left: 2px groove #1cafef;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.header .user-login {
+  color: #fff;
+  text-align: right;
+  font-size: 14px;
+  padding-top: 20px;
+  height: 30px;
+  line-height: 30px;
+}
+.header .user-login .user-name {
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 5em;
+}
+.header .user-login .user-exit-icon {
+  float: right;
+  margin-left: 10px;
+}
+.header .user-login .user-exit-icon i.iconfont {
+  line-height: 28px;
+}
+.header .user-login i.iconfont {
+  float: right;
+  padding-left: 8px;
+  font-size: 18px;
+  font-weight: 100;
+}
+.header .user-login a {
+  color: #fff;
+}
+.header .user-login a:hover {
+  opacity: .8;
+  filter: alpha(opacity=80);
+}
+.header-nav {
+  padding-left: 50px;
+  float: left;
+}
+.header-nav li {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  float: left;
+}
+.header-nav li.currentPage a {
+  transition: none;
+  background-color: #076189;
+}
+.header-nav li a {
+  display: block;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 14px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.header-nav li a:hover {
+  background-color: #076189;
+}
+.mask-layer {
+  display: none;
+}
+/*动画*/
+/*tencent*/
+.nav-toggle {
+  position: absolute;
+  left: 10px;
+  padding: 14px 10px;
+  background-image: none;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+}
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 20px;
+  transform-origin: 20px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.nav-toggle span:first-child {
+  margin-top: 0;
+}
+/*利用transform属性来改变横条的旋转角度*/
+.nav-toggle.toggle-animate span:nth-last-child(1) {
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*
+ * 隐藏一个横条
+ */
+.nav-toggle.toggle-animate span:nth-last-child(2) {
+  opacity: 0;
+}
+/*
+ * 改变另一个横条的旋转角度
+ */
+.nav-toggle.toggle-animate span:nth-last-child(3) {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*渐显动画*/
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+    animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+  }
+  76.92% {
+    opacity: 1;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  76.92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

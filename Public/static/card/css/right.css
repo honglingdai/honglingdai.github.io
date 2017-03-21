@@ -1,0 +1,203 @@
+/* 右侧面板 */
+.right-con {
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 278px;
+  background: #fff;
+  border: 1px solid #dddddd;
+  border-top: none;
+  /*选择答题卡版式*/
+  /* 选择版式 */
+  /* 考试类型 */
+  /* 添加试题 */
+  /* 试题列表 */
+  /* 按钮 */
+}
+.right-con .title {
+  height: 32px;
+  line-height: 32px;
+  background: #f1f0f0;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding-left: 20px;
+  position: relative;
+}
+.right-con .title::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 3px;
+  height: 14px;
+  background: #04a2e9;
+}
+.right-con .panel-order {
+  padding: 12px 0 12px 20px;
+  overflow: hidden;
+}
+.right-con .panel-order .type-select label {
+  cursor: pointer;
+  margin: 15px;
+}
+.right-con .panel-order .choice {
+  position: relative;
+  background: #d6f1fc;
+  border-color: #1798d0;
+  color: #1798d0;
+}
+.right-con .panel-order .choice::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 15px;
+  background: url(/Public/default/image/answer/choice.png) no-repeat;
+}
+.right-con .answer-type {
+  text-align: center;
+  font-size: 16px;
+  padding: 16px 0;
+  color: #1798d0;
+  width: 100px;
+  margin: 10px auto;
+  border: 1px solid #1798d0;
+  background-color: #d6f1fc;
+}
+.right-con .format li {
+  float: left;
+  width: 104px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+.right-con .format li .format-img {
+  width: 64px;
+  height: 52px;
+  line-height: 46px;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+}
+.right-con .format li .format-img img {
+  vertical-align: middle;
+}
+.right-con .format li .format-img:hover {
+  background: #d6f1fc;
+  border-color: #1798d0;
+}
+.right-con .format li .format-img.choice {
+  border-color: #1798d0;
+}
+.right-con .format li p {
+  margin-top: 6px;
+}
+.right-con .examtype {
+  margin-bottom: -10px;
+}
+.right-con .examtype a {
+  display: inline-block;
+  width: 104px;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+  color: #333;
+  border: 1px solid #c3c3c3;
+  margin: 0 10px 10px 0;
+}
+.right-con .examtype a:hover {
+  background: #d6f1fc;
+  border-color: #1798d0;
+  color: #1798d0;
+}
+.right-con .addtest {
+  margin-bottom: -10px;
+}
+.right-con .addtest a {
+  display: inline-block;
+  width: 104px;
+  height: 38px;
+  line-height: 38px;
+  color: #333;
+  background: #ededed;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+  padding-left: 37px;
+  position: relative;
+}
+.right-con .addtest a span {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 22px;
+  border: 1px solid #04a2e9;
+  color: #04a2e9;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+.right-con .addtest a:hover {
+  background: #d6f1fc;
+}
+.right-con .testlist {
+  padding-right: 20px;
+  padding-bottom: 125px;
+  overflow-y: auto;
+}
+.right-con .testlist li {
+  line-height: 31px;
+  white-space: nowrap;
+  border-top: 1px dashed #d4d4d4;
+  overflow: hidden;
+}
+.right-con .testlist li:first-child {
+  border-top: none;
+}
+.right-con .testlist li .test-title {
+  float: left;
+  width: 140px;
+  margin-right: 4px;
+  text-overflow: ellipsis;
+  color: #333;
+  cursor: move;
+  overflow: hidden;
+}
+.right-con .testlist li .test-number {
+  float: left;
+}
+.right-con .testlist li .icon {
+  float: right;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url(/Public/default/image/answer/delate.png) no-repeat;
+  opacity: .7;
+  margin-top: 10px;
+}
+.right-con .testlist li .icon:hover {
+  opacity: 1;
+}
+.right-con .testlist li .edit-ques {
+  float: right;
+  margin-left: 4px;
+  color: #aaa;
+}
+.right-con .testlist .del-all-part {
+  float: right;
+  font-size: 12px;
+  color: #00adef;
+}
+.right-con .testlist .del-all-part:hover {
+  text-decoration: underline;
+}
+.right-con .btn-item {
+  margin-left: 20px;
+  border-top: 1px solid #ddd;
+  padding-bottom: 20px;
+}

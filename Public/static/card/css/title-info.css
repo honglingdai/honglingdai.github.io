@@ -1,0 +1,176 @@
+.box-a4 .intro-l {
+  width: 446px;
+}
+.box-a4 .intro-r {
+  width: 231px;
+}
+.box-a3 .barcode {
+  width: 221px;
+}
+.box-a3 .notice {
+  width: 230px;
+}
+.box-a3 .miss {
+  margin-top: 10px;
+}
+.exam-cont {
+  overflow: hidden;
+}
+.exam-cont .numwidth {
+  display: inline-block;
+  width: 4em;
+  overflow: hidden;
+}
+.exam-cont .card {
+  width: 100%;
+}
+/* 注意事项 */
+.notice {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: 1px solid #e4037f;
+  background: #fff;
+  overflow: hidden;
+}
+.notice .text {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 6px;
+  color: #e4037f;
+}
+.notice span {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin: 0 5px;
+  background: #000;
+}
+/* 条形码 */
+.barcode {
+  line-height: 32px;
+  box-sizing: border-box;
+  width: 231px;
+  height: 89px;
+  border: 1px dotted #e4037f;
+  background: #fff;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.barcode h3 {
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}
+/* 简单版准考证号 */
+.exam-number {
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.exam-number span {
+  float: left;
+  box-sizing: border-box;
+  width: 27px;
+  height: 32px;
+  margin-left: 3px;
+  border: 1px solid #e4037f;
+  background-color: #fff;
+}
+.exam-number .numwidth {
+  float: left;
+  width: 4em;
+  white-space: nowrap;
+}
+/* 考试禁填 */
+.miss {
+  line-height: 40px;
+  height: 42px;
+  padding: 0 10px;
+  border: 1px solid #e4037f;
+  background: #fff;
+}
+.miss .miss-sign {
+  font-size: 12px;
+  float: right;
+}
+.miss .miss-sign em {
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-left: 5px;
+  border: 1px solid #000;
+}
+/* A4准考证号简单版 */
+.box-a4 .layer1 .miss {
+  margin-top: 14px;
+}
+/* A4准考证号复杂版 */
+.box-a4 .layer2 .miss {
+  margin-top: 13px;
+}
+/* 准考证 */
+.card {
+  font-size: 12px;
+}
+.card td {
+  border: 1px solid #e4037f;
+  padding: 6px 0;
+  color: #e4037f;
+  width: 34px;
+  overflow: hidden;
+  text-align: center;
+}
+.card .title {
+  font-size: 14px;
+  line-height: 22px;
+}
+.card .pad4 {
+  font-size: 12px;
+  line-height: 2em;
+}
+.pad8 td {
+  padding: 13px 6px;
+}
+.examtype-gk .notice {
+  height: 103px;
+}
+/* A3准考证号简单版 */
+.box-a3 .exam-intro {
+  padding: 10px 2px 0 2px;
+  margin-top: -10px;
+}
+.box-a3 .barcode {
+  margin-bottom: 25px;
+}
+.box-a3 .part-wrap {
+  width: 461px;
+}
+.box-a3 .examtype-gk .notice {
+  height: auto;
+}
+.box-a4 .examtype-dy .notice {
+  height: 145px;
+}
+.box-a4 .examtype-ks .notice {
+  overflow: hidden;
+  width: 100%;
+  height: 260px;
+}
+.box-a4 .examtype-qz .notice {
+  margin-top: 10px;
+  height: 165px;
+  overflow: hidden;
+}
+.box-a4 .examtype-qz .miss {
+  margin-top: 10px;
+}
+.box-a3 .examtype-qz .tab-card {
+  margin-bottom: 8px;
+}
+.box-a3 .examtype-ks .notice {
+  width: auto;
+  margin-bottom: 8px;
+}

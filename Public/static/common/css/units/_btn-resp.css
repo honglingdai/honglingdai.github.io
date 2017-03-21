@@ -1,0 +1,6 @@
+@media (max-width: 991px) {
+  .btn:hover {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  }
+}

@@ -1,0 +1,23 @@
+.tab .tab-nav {
+  border-bottom: 1px solid #ddd;
+}
+.tab .tab-nav .nav-itm {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0.4em 0.8em;
+  border-radius: 2px 2px 0 0;
+}
+.tab .tab-nav .nav-itm:hover {
+  background-color: #f1f1f1;
+}
+.tab .tab-nav .nav-itm.on {
+  border: 1px solid #ddd;
+  border-bottom-color: #fff;
+  background-color: #fff;
+  color: #1499d2;
+  cursor: default;
+  margin: -1px;
+}

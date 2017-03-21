@@ -1,0 +1,149 @@
+.sidebar-tool-wrap {
+  width: 100%;
+  height: 0;
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+}
+.sidebar-tool-wrap .sidebar-tool {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list {
+  float: right;
+  margin-right: -40px;
+  width: 44px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list .item4 {
+  height: 0;
+  overflow: hidden;
+  border-bottom-width: 0;
+  transition: height 0.3s ease-in-out 0.5s , border-bottom-width 0.3s ease-in-out 0.5s;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li {
+  border: 1px solid #ddd;
+  border-top: 0;
+  height: 42px;
+  background: url(../img/analy/sidebar/sidebar_icon.png) -2px 0 no-repeat;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li:first-child {
+  border-top: 1px solid #ddd;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item1 {
+  background-position: -2px 0;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item1 .service-tell {
+  float: left;
+  width: 90px;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: transform 0.2s , opacity 0.2s;
+  -o-transition: transform 0.2s , opacity 0.2s;
+  transition: transform 0.2s , opacity 0.2s;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+  transform-origin: 100% 0;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item1 .service-tell .icon {
+  padding-left: 24px;
+  background: url(../img/analy/sidebar/tell.png) 0 50% no-repeat;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item1 .service-tell p {
+  font-size: 12px;
+  color: #1499d2;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item1:hover .service-tell {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item2 {
+  background-position: -2px -45px;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item3 {
+  background-position: -2px -88px;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item3 .show-ewm {
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15);
+  -webkit-transition: transform 0.4s , opacity 0.4s;
+  -o-transition: transform 0.4s , opacity 0.4s;
+  transition: transform 0.4s , opacity 0.4s;
+  transform-origin: 100% 100%;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item3 .show-ewm .app-ewm {
+  float: left;
+  width: 90px;
+  padding: 14px 5px 4px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item3 .show-ewm .app-ewm img {
+  display: block;
+  margin: 0 auto;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item3 .show-ewm .app-ewm p {
+  padding: 6px;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item3:hover .show-ewm {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li.item4 {
+  background-position: -2px -133px;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li > a {
+  display: block;
+  height: 100%;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li .tips-title {
+  padding: 5px 0;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: #1499d2;
+  color: #fff;
+  text-align: center;
+  display: block;
+  opacity: 0.0;
+  filter: alpha(opacity=0);
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li:hover {
+  border-color: #1499d2;
+}
+.sidebar-tool-wrap .sidebar-tool .func-list > li:hover .tips-title {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}

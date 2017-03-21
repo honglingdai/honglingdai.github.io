@@ -1,0 +1,172 @@
+/*按钮*/
+.btn {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  *line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.btn {
+  font-family: inherit;
+  font-size: 100%;
+  *font-size: 90%;
+  *overflow: visible;
+  padding: 0.35em 0.75em;
+  color: #444;
+  color: rgba(0, 0, 0, 0.8);
+  *color: #444;
+  border: 1px solid #eee;
+  background-color: #eee;
+  text-decoration: none;
+}
+.btn-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0;
+  color: inherit;
+  background-color: transparent;
+}
+.btn-close {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background-color: transparent;
+}
+.btn-hidden {
+  display: none;
+}
+.btn-primary,
+.btn-selected,
+a.btn-primary,
+a.btn-selected {
+  background-color: #1499d2;
+  border-color: #1499d2;
+  color: #fff;
+}
+.btn-white {
+  background-color: #fff;
+}
+.btn-white:hover {
+  border-color: #1499d2;
+  color: #1499d2;
+}
+.btn-white.checked {
+  border-color: #1499d2;
+  color: #1499d2;
+  cursor: default;
+}
+.btn-yellow,
+.btn-yellow:hover {
+  background-color: #f5b931;
+  border-color: #f5b931;
+  color: #fff;
+}
+.btn-second {
+  background: #fff;
+  color: #1499d2;
+  border-color: #1499d2;
+  -webkit-transition: background-color 0.3s ,  color 0.3s;
+  -o-transition: background-color 0.3s ,  color 0.3s;
+  transition: background-color 0.3s ,  color 0.3s;
+}
+.btn-second:hover {
+  background: #1499d2;
+  color: white;
+}
+/*btn-扩展*/
+/*状态*/
+.btn-success,
+.btn-error,
+.btn-warning {
+  color: white;
+}
+.btn-success {
+  background: #33b466;
+  border-color: #33b466;
+}
+.btn-error {
+  background: #f03b19;
+  border-color: #f03b19;
+}
+.btn-warning {
+  background: #f66606;
+  border-color: #f66606;
+}
+/*大小*/
+.btn-xs {
+  font-size: 70%;
+}
+.btn-sm {
+  font-size: 85%;
+}
+.btn-lg {
+  font-size: 110%;
+}
+.btn-xl {
+  font-size: 125%;
+}
+/* 宽度 */
+.btn-lg-w {
+  min-width: 120px;
+}
+.btn-md-w {
+  min-width: 60px;
+}
+.btn-block {
+  display: block;
+}
+/* 交互 */
+.btn-hover,
+.btn:hover,
+.btn:focus {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1affffff', endColorstr='#1affffff', GradientType=0);
+}
+.btn:focus {
+  outline: 0;
+}
+.btn-active,
+.btn-active:hover {
+  cursor: default;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40000000', endColorstr='#1a000000', GradientType=0);
+}
+.btn:active {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a000000', endColorstr='#1a000000', GradientType=0);
+}
+.btn[disabled],
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled:active {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
+}

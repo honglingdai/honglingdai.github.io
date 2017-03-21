@@ -1,0 +1,10 @@
+@media (max-width: 991px) {
+  .panel .panel-head {
+    line-height: 28px;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+  .panel .panel-handle .btn {
+    line-height: 26px;
+  }
+}

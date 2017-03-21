@@ -1,0 +1,114 @@
+.header-wrap {
+  position: relative;
+  z-index: 100;
+  background-color: #1499d2;
+}
+.header {
+  position: relative;
+  z-index: 0;
+}
+.header .logo {
+  float: left;
+  height: 70px;
+}
+.header .logo img {
+  padding-top: 10px;
+}
+.header .logo .sub-logo {
+  float: right;
+  color: #fff;
+  margin-top: 18px;
+  line-height: 1.4;
+  font-size: 22px;
+  font-weight: 300;
+  border-left: 2px groove #1cafef;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+.header .user-login {
+  float: right;
+  position: relative;
+  color: #fff;
+  padding: 20px 6px;
+  width: 150px;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  cursor: default;
+}
+.header .user-login:hover {
+  background-color: #1288bb;
+}
+.header .user-login:hover .user-menu-list {
+  display: block;
+}
+.header .user-login .user-name {
+  white-space: nowrap;
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 4em;
+  vertical-align: bottom;
+}
+.header .user-login .user-icon {
+  float: left;
+  font-size: 23px;
+  margin-right: 6px;
+}
+.header .user-login .arrow-icon {
+  top: 10px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: #fff transparent transparent transparent;
+  border-bottom-width: 0;
+}
+.header .user-login a {
+  color: #fff;
+}
+.header .user-login a:hover {
+  opacity: .9;
+  filter: alpha(opacity=80);
+}
+.header .user-login .user-menu-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.header .user-login .user-menu-list li {
+  line-height: 40px;
+  text-align: left;
+  padding: 0 6px;
+}
+.header .user-login .user-menu-list li a {
+  display: block;
+  border-top: 1px dotted #3c3c3c;
+  padding-left: 36px;
+}
+.header .user-login .user-menu-list li a i.iconfont {
+  margin-right: 5px;
+  font-weight: 600;
+}
+.header .user-login .user-menu-list li a sup {
+  display: inline-block;
+  background-color: #f03b19;
+  border-radius: 8px;
+  height: 15px;
+  padding: 0 4px;
+  line-height: 15px;
+  text-align: center;
+}
+.header .user-login .user-menu-list li:first-child a {
+  border: none;
+}
+.header .user-login .user-menu-list li:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.header .user-login .user-menu-list .um-xiaoxi-ico {
+  color: #1499d2;
+}
+.header .user-login .user-menu-list .um-exit-ico {
+  color: #f03b19;
+}

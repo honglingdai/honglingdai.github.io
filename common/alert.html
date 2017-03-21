@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>提示信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/Public/static/common/css/base-review.css">
+    <link rel="stylesheet" type="text/css" href="/Public/static/common/css/alert.css">
+</head>
+<body>
+    <div class="alert-body">
+        <div class="logo center">
+            <img src="/app/common/img/error_logo.png" alt="logo"></div>
+        <p class="alert-text center error">
+            <span class="dib"> <i class="iconfont">&#xe636;</i>
+                {#$msg_detail#}
+            </span>
+            <br>
+            <span class="alert-code">(错误代码{#$errorNum#})</span>
+        </p>
+
+        <div class="handle-btn center">
+    <a href="{#$jumpUrl#}" class=""> <i class="iconfont">&#xe63b;</i>
+        返回上一页
+    </a>
+    <a href="{#:U('/')#}" class=""> <i class="iconfont">&#xe63c;</i>
+        未来脑首页
+    </a>
+</div>
+
+        <div class="helper-text center">
+            温馨提示：请确认您的操作是否有误，
+        系统
+            <span class="lighter" id="spanSeconds">{#$waitSecond#}</span>
+            秒后返回
+            <a href="{#$jumpUrl#}" class="link">上一级</a>
+        </div>
+    </div>
+    {#if condition="$auto_redirect"#}
+    <script language="JavaScript">
+    <!--
+    var seconds = {#$waitSecond#};
+    var defaultUrl = "{#$jumpUrl#}";
+    var intv;
+    {#literal#}
+    onload = function()
+    {
+        if (defaultUrl == 'javascript:history.go(-1)' && window.history.length == 0)
+        {
+            document.getElementById('redirectionMsg').innerHTML = '';
+            return;
+        }
+
+        intv=window.setInterval(redirection, 1000);
+    }
+    function redirection()
+    {
+        if (seconds <= 0)
+        {
+            window.clearInterval(intv);
+            return;
+        }
+        seconds --;
+        document.getElementById('spanSeconds').innerHTML = seconds;
+
+        if (seconds == 0)
+        {
+            window.clearInterval(intv);
+            location.href = defaultUrl;
+        }
+    }
+    //--></script>
+    {#/literal#}
+{#/if#}
+</body>
+</html>

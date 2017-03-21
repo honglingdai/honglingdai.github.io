@@ -1,0 +1,17 @@
+.footer-wrap {
+  padding: 12px 0;
+  line-height: 22px;
+  font-size: 13px;
+}
+.footer-wrap .footer {
+  color: #c5c5c5;
+  text-align: center;
+}
+.footer-wrap .footer a {
+  display: inline-block;
+  color: #c5c5c5;
+}
+.footer-wrap .footer a#anbei {
+  padding-left: 24px;
+  background: url(../img/icon_anbei.png) 2px 50% no-repeat;
+}

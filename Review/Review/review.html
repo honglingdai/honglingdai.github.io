@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7" lang="zh-CN"><![endif]-->
+<!--[if lte IE 8 ]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no"/>
+<meta id="_csrf" name="_csrf" content="{#$_csrf#}">
+
+    <title>未来脑智能教学云平台-阅卷系统</title>
+    <link rel="stylesheet" href="/Public/static/common/css/base-review.css">
+    <link rel="stylesheet" href="/Public/static/review/css/review.css">
+    <!--[if lte IE 8]>
+<script src="/Public/static/lib/html5shiv/dist/html5shiv.min.js"></script>
+<script src="/Public/static/lib/respond/dest/respond.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        var OP_CONF = {
+            "modu": "review",
+            "page": "review"
+        };
+    </script>
+</head>
+
+<body>
+<div class="header-wrap">
+    <div class="content header clearfix">
+        <span id="nav-toggle" class="nav-toggle"><span></span><span></span><span></span></span>
+<div class="logo"><a href="/Review/Index/index.html"><img src="/Public/static/common/img/logo.png" alt=""/></a></div>
+        <ul class="header-nav">
+            <li><a href="/Review/Index/index.html">考试列表</a></li>
+            <li><a href="/Review/Index/mark.html">试题评阅</a></li>
+            <li><a href="/Review/Progress/progress.html">进度查询</a></li>
+            <li><a href="/Review/Review/review.html">试题自检</a></li>
+            <li><a href="/Review/Contrast/temp.html">样卷对比</a></li>
+            <li><a href="/Review/Standard/standard.html">评分标准</a></li>
+        </ul>
+        <div class="user-login" id="user-login-state">
+    <div class="isLogin" style="display:none">
+        <span class="dib va-t hidden-xs">您好！</span><span class="user-name elli  hidden-xs"></span>
+        <a class="dib va-t user-exit-icon" href="javascript:;" id="login-out">退出<i class="iconfont exit-icon">&#xe637;</i></a>
+    </div>
+    <div class="isExit" style="display:none">
+        <a class="" href="">登录 <i class="iconfont">&#xe647;</i></a>
+    </div>
+</div>
+        <div class="mask-layer" id="mask-layer" role="遮罩层"></div>
+
+    </div>
+</div>
+
+<div class="loading full-loading"></div>
+<div class="content">
+    <div class=" j_m-style exam-review inner-wall bg-white" id="main" style="padding-bottom:20px">
+        <h2 class="content-title" id="j_contentTitle">...</h2>
+        <div class="er-body clearfix un-select">
+            <!--得分祥情-->
+            <div class="j_tips-score-details" id="ques-score-details" style="display:none">
+                <div class="sd-content">
+                    <p style="background-color:#DFF2FA;padding:20px;text-align: center">加载中...</p>
+                </div>
+            </div>
+            <!--得分祥情-END-->
+            <div class="er-sidebar">
+                <form class="form" action="" data-target="mobile">
+                    <!--试题图象缩放工具-->
+<div class="fieldset imgZoomTool-wrap hidden-sm hidden-xs">
+    <div class="imgZoomTool clearfix">
+        <!--<div class="prog-bar fl">-->
+        <!--<span class="bar-inner"></span>-->
+        <!--</div>-->
+        <!--<div class="pct-val fl"><input type="text" value="100"/> % </div>-->
+        <div class="bar-btn fr">
+            <a class="zoomBig iconfont mr2" href="javascript:;">&#xe651;</a>
+            <a class="zoomSmall iconfont mr2" href="javascript:;">&#xe650;</a>
+            <!--<a class="zoomToggle iconfont mr2" href="javascript:;">&#xe66f;</a>-->
+        </div>
+    </div>
+</div>
+                    <div class="fieldset">
+                        <h3 class="pl10">试题重阅
+                            <a class="j_close-panel visible-xs visible-sm fr btn btn-close iconfont" style="position:static;" data-mark="open" href="javascript:;">
+                                <span class="open icon-active">&#xe613;</span></a>
+                            <a class="j_search-btn btn btn-link fr" id="j_search-btn" href="javascript:;"><i class="iconfont">&#xe60b;</i></a>
+                            <small class="search-res fr" id="j_testNum">...</small>
+                            </h3>
+                        <div class="res-list" id="j_marked-list">
+                            <p class="loading bg-white"></p>
+                        </div>
+                    </div>
+
+                    <div class="fieldset bg-white p15" id="j_review-handle">
+                        <a class="btn btn-lg btn-primary btn-block" href="/Review/Index/mark.html#from_review">重新阅卷</a>
+                    </div>
+                </form>
+            </div>
+            <div class="er-left">
+                <div class="paper-img" id="j_view-ques-img" style="height:100%;box-sizing:border-box;overflow: hidden">
+                    <p class="loading"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--得分详情-->
+<!--<div class="j_tips-score-details hidden">-->
+    <!--<div class="sd-content">-->
+        <!--<h4>给分详情 <small>（得分：5分）</small></h4>-->
+        <!--<ul class="sd-scroll">-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+            <!--<li class="sd-itm">第7（1）题：<span class="text-danger">3</span>分</li>-->
+        <!--</ul>-->
+        <!--<a class="btn btn-primary btn-block" href="">重新阅卷</a>-->
+    <!--</div>-->
+
+    <!--<span class="arrow-tip"></span>-->
+<!--</div>-->
+ <!--<link rel="import" href="/app/common/view/footer.tpl?__inline">-->
+<script type="text/javascript" src="/Public/static/sea.js"></script>
+<script type="text/javascript" src="/Public/static/seajs_config.js"></script>
+<script type="text/javascript">
+    seajs.use( "/Public/static/" + OP_CONF.modu +"/js/"+ OP_CONF.page);
+</script>
+</body>
+</html>

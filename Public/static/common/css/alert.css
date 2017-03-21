@@ -1,0 +1,76 @@
+body {
+  background-color: #fff;
+}
+.alert-body {
+  padding: 0 1em;
+}
+.logo {
+  padding-top: 5em;
+}
+.alert-text {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 60px;
+}
+.alert-text .alert-code {
+  font-size: 16px;
+}
+.alert-text i {
+  float: left;
+  margin-right: 0.3em;
+  font-size: 1.6em;
+}
+.alert-text.success i {
+  color: #1AC577;
+}
+.alert-text.error i {
+  color: #c81623;
+}
+.alert-code,
+.lighter {
+  color: #04A2E9;
+}
+.handle-btn {
+  font-size: 16px;
+}
+.handle-btn a {
+  color: #333;
+  margin: 0 1em;
+}
+.handle-btn a .iconfont {
+  font-size: 1.3em;
+  color: #04A2E9;
+  padding-right: .6em;
+}
+.handle-btn a:hover {
+  color: #04A2E9;
+}
+.helper-text {
+  padding-top: 1em;
+  color: #888;
+  line-height: 2;
+}
+.helper-text a {
+  color: #04A2E9;
+}
+.helper-text a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .logo img {
+    width: 160px;
+  }
+  .alert-text {
+    padding-top: 0;
+  }
+  .handle-btn {
+    font-size: 14px;
+    padding-top: 2em;
+  }
+  .handle-btn a {
+    margin: 0 .5em;
+  }
+  .handle-btn a .iconfont {
+    padding-right: .3em;
+  }
+}

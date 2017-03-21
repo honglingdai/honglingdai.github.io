@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>提示信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/Public/static/common/css/base-review.css">
+    <link rel="stylesheet" type="text/css" href="/Public/static/common/css/alert.css">
+</head>
+<body>
+    <div class="alert-body">
+        <div class="logo center">
+            <img src="/app/common/img/error_logo.png" alt="logo"></div>
+        <p class="alert-text center error">
+            <span class="dib">很抱歉！您访问的页面不存在</span>
+            <br>
+            <span class="alert-code">(错误代码404)</span>
+        </p>
+
+        <div class="handle-btn center">
+    <a href="{#$jumpUrl#}" class=""> <i class="iconfont">&#xe63b;</i>
+        返回上一页
+    </a>
+    <a href="{#:U('/')#}" class=""> <i class="iconfont">&#xe63c;</i>
+        未来脑首页
+    </a>
+</div>
+
+        <div class="helper-text center">
+            温馨提示：您可能输错网址，或该网页已删除或移动
+        系统
+            <span class="lighter">5</span>
+            秒后返回
+            <a href="" class="link">上一级</a>
+        </div>
+    </div>
+</body>
+</html>

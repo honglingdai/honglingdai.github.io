@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7" lang="zh-CN"><![endif]-->
+<!--[if lte IE 8 ]><html class="lte-ie8" lang="zh-CN"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="阅卷系统，智能云阅卷，定制化答题卡，成绩分析">
+<meta name="description" content="一键提取试题，组卷完成可以直接导入阅卷系统 节省时间 高效办公；定制化答题卡，答题卡实现可视化编辑 适应任何样式的答题卡；扫描+阅卷系统智能扫描答题卡，云阅卷适应电脑、平板、手机，实现全网阅卷；成绩分析运用项目反映理论，独家分析特优生、临界生
+找到学习短板，帮助学生提高成绩">
+<meta name="viewport" content="width=1200">
+<meta id="_csrf" name="_csrf" content="{#$_csrf#}">
+    <title>未来脑智能教学云平台官网 - 首页</title>
+    <link rel="stylesheet" href="/Public/static/common/css/base-analy.css">
+    <link rel="stylesheet" href="/Public/static/analy/css/analy.css">
+
+    <!--[if lte IE 8]>
+<script src="/Public/static/lib/html5shiv/dist/html5shiv.min.js"></script>
+<script src="/Public/static/lib/respond/dest/respond.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        var OP_CONF = {
+            "modu": "analy",
+            "page": "bzr-miaoshu"
+        };
+    </script>
+</head>
+
+<body class="no-mobile">
+<div class="header-wrap">
+    <div class="content header clearfix">
+        <!--<span id="nav-toggle" class="nav-toggle"><span></span><span></span><span></span></span>-->
+        <div class="logo"><a href="/Analysis/Index/index.html"><img src="/Public/static/common/img/logo.png" alt=""/> <span class="sub-logo">成绩分析系统</span></a></div>
+        <!--<ul class="header-nav">-->
+            <!--<li><a href="./task.html">试题评阅</a></li>-->
+        <!--</ul>-->
+        <div class="user-login" id="user-login-state">
+            <div class="isLogin" style="display:none">
+                <span class="dib va-t"><i class="iconfont user-icon">&#xe602;</i>您好！<span class="user-name mr5">...</span><sup class="arrow-icon"></sup></span>
+                <!--<a class="dib va-t user-exit-icon" href="javascript:;" id="login-out">退出 <i class="iconfont exit-icon">&#xe637;</i></a>-->
+                <ul class="user-menu-list">
+                    <li><a href="/Analysis/Index/messages.html" class="pos-r"><i class="iconfont um-xiaoxi-ico">&#xe619;</i>系统消息 <sup>1</sup></a></li>
+                    <li><a id="login-out" href="javascript:;"><i class="iconfont um-exit-ico">&#xe637;</i>退出登录</a></li>
+                </ul>
+            </div>
+            <div class="isExit" style="display:none">
+                <a class="" href="">登录 <i class="iconfont">&#xe647;</i></a>
+            </div>
+        </div>
+        <!--<div class="mask-layer" id="mask-layer" role="遮罩层"></div>-->
+    </div>
+</div>
+
+<div class="crumbs-wrap">
+    <div class="crumbs content" id="j_main-crumbs">
+        <!--<cite>当前位置：</cite>-->
+        <a href="">首页</a>
+        <i class="icon">/</i>
+        <a href="">...</a>
+        <i class="icon">/</i>
+        <span id="crumbs_on">...</span>
+    </div>
+</div>
+<div class="content mb30">
+    <div class="analy-lay">
+        <div class="analy-head">
+    <div class="head-nav">
+    <a class="tab-itm" href="/Analysis/Bzr/gaikuang.html" data-href="gaikuang&miaoshu&shangxian&chengji&xueqing">班级报告</a>
+    <a class="tab-itm" href="/Analysis/Bzr/chaxun.html" data-href="chaxun">学生报告查询</a>
+    <a class="tab-itm" href="/Analysis/Bzr/mingtizhiliang.html" data-href="mingtizhiliang">命题质量报告</a>
+    <a class="go-back" href="/Analysis/Index/index.html">返回考试列表</a>
+    <a class="change-iden" id="change-ident" style="display:none"><i class="iconfont">&#xe663;</i>切换身份</a>
+</div>
+    <div class="head-body">
+        <!--报告头部-->
+        <div class="clearfix">
+    <div class="fl">
+        <h2 id="j_exam-title">
+            <b>...</b>
+        </h2>
+        <p id="j_exam-item">
+            <!--<span class="desc-item">考试创建时间：<em class="j_exam-time">...</em></span>-->
+            <!--<span class="desc-item">年级：<em class="j_exam-nianji">...</em></span>-->
+            <!--<span class="desc-item">学校：<em class="j_exam-school">...</em></span>-->
+            <!--<span class="desc-item">班级：<em class="j_exam-banji">...</em></span>-->
+        </p>
+    </div>
+    <div class="fr">
+        <p class="report-top-header">
+            <a class="btn btn-primary report-btn" id="report-pdf"><i class="iconfont">&#xe63e;</i>班主任报告</a>
+        </p>
+        <p class="report-top-info"><a class="dib j_pdf-alert mr2" href="javascript:;">PDF文件打不开</a></p>
+    </div>
+</div>
+        <div class="class-filter clearfix">
+    <div class="fl">
+        <!--<link rel="import" href="./class-category.tpl?__inline">-->
+        <ul class="filter-item mt5" id="j_filter-fenlei">
+    <li class="category-name"><b>分析类别：</b></li>
+    <li><a href="/Analysis/Bzr/gaikuang.html" data-target="gaikuang">考试概括</a></li>
+    <li><a class="" href="/Analysis/Bzr/miaoshu.html" data-target="miaoshu">描述性统计</a></li>
+    <li><a href="/Analysis/Bzr/shangxian.html" data-target="shangxian">上线情况</a></li>
+    <li><a class="" href="/Analysis/Bzr/chengji.html" data-target="chengji">成绩分析</a></li>
+    <li><a href="/Analysis/Bzr/xueqing.html" data-target="xueqing">本班学情分析</a></li>
+</ul>
+    </div>
+    <a class="fr dib gaofen-paper btn btn-link text-primary" id="gaofen-paper"><i class="iconfont">&#xe66b;</i><br/>高分试卷</a>
+    <a class="fr dib gaofen-paper btn btn-link text-primary" style="display: none" id="gaofen-composition"><i class="iconfont">&#xe65f;</i><br/>高分作文</a>
+</div>
+    </div>
+</div>
+        <div class="analy-body">
+            <!--最高分-->
+            <div class="analy-lay-item mt30 j_output-excel-block">
+    <h4 class="head text-primary">
+        <b>最高分</b>
+        <a class="output-excel disabled" href="javascript:;"><i class="iconfont">&#xe600;</i>导出Excel表格</a>
+    </h4>
+    <div class="item-body pt20">
+        <p class="pb10 fw6" id="j_zuigaofenDesc">
+            ...
+        </p>
+        <table class="item-table-info table-fixed table table-bordered pct100" id="j_zuigaofen">
+            <tr>
+                <td>
+                    <p class="loading"></p>
+                </td>
+            </tr>
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th><b>学科名称</b></th>-->
+                <!--<th><b>语文</b></th>-->
+                <!--<th><b>数学</b></th>-->
+                <!--<th><b>英语</b></th>-->
+                <!--<th><b>物理</b></th>-->
+                <!--<th><b>化学</b></th>-->
+                <!--<th><b>生物</b></th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<td><b>最高分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>人数</b></td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>归属学校</b></td>-->
+                <!--<td>某第一中学 等</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学 等</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学 等</td>-->
+                <!--<td>某第一中学</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>本校最高分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>归属班级</b></td>-->
+                <!--<td>高三1班</td>-->
+                <!--<td>高三1班</td>-->
+                <!--<td>高三1班</td>-->
+                <!--<td>高三1班</td>-->
+                <!--<td>高三1班</td>-->
+                <!--<td>高三1班</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>本班最高分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>归属姓名</b></td>-->
+                <!--<td>小明</td>-->
+                <!--<td>小明</td>-->
+                <!--<td>小明</td>-->
+                <!--<td>小明</td>-->
+                <!--<td>小明</td>-->
+                <!--<td>小明</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        </table>
+    </div>
+</div>
+            <!--联考优秀学生分布-->
+            <div class="analy-lay-item mt30 j_output-excel-block">
+    <h4 class="head text-primary">
+        <b>联考优秀学生分布</b>
+        <a class="output-excel disabled" href="javascript:;"><i class="iconfont">&#xe600;</i>导出Excel表格</a>
+    </h4>
+    <div class="item-body pt20">
+        <table class="item-table-info table-fixed table table-bordered pct100" id="j_youxiuxuesheng">
+            <tr>
+                <td>
+                    <p class="loading"></p>
+                </td>
+            </tr>
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th><b>本校（班级）</b></th>-->
+                <!--<th><b>前10名</b></th>-->
+                <!--<th><b>前20名</b></th>-->
+                <!--<th><b>前30名</b></th>-->
+                <!--<th><b>前50名</b></th>-->
+                <!--<th><b>前100名</b></th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<td><b>最低分</b></td>-->
+                <!--<td>619</td>-->
+                <!--<td>609</td>-->
+                <!--<td>602</td>-->
+                <!--<td>589</td>-->
+                <!--<td>575</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>高三1班</b></td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>总计</b></td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+                <!--<td>10</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        </table>
+    </div>
+</div>
+            <!--平均分与标准分-->
+            <!--平均分与标准分-->
+<div class="analy-lay-item mt30 j_output-excel-block">
+    <h4 class="head text-primary">
+        <b>平均分与标准分</b>
+        <a class="output-excel disabled" href="javascript:;"><i class="iconfont">&#xe600;</i>导出Excel表格</a>
+    </h4>
+    <div class="item-body pt20">
+        <table class="item-table-info table-fixed table table-bordered pct100" id="j_pingjunfenBiaozhunfen">
+            <tr>
+                <td>
+                    <p class="loading"></p>
+                </td>
+            </tr>
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th><b>学科</b></th>-->
+                <!--<th><b>语文</b></th>-->
+                <!--<th><b>数学</b></th>-->
+                <!--<th><b>英语</b></th>-->
+                <!--<th><b>物理</b></th>-->
+                <!--<th><b>化学</b></th>-->
+                <!--<th><b>生物</b></th>-->
+                <!--<th><b>总分</b></th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<td><b>联考平均分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td><b>最高平均分（校）</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>所属学校</b></td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学</td>-->
+                <!--<td>某第一中学</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>我校平均分</b></td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>标准分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>一本上线平均分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>本校一本平均分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>二本上线平均分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>本校二本平均分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>100</td>-->
+                <!--<td>600</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>某第一中学</b></td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+                <!--<td>100（第1名）</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        </table>
+        <!--本校学科标准分比较图-->
+        <div class="pt30" id="chart_pingjunfenBiaozhunfen" style="display:none;">
+        </div>
+    </div>
+</div>
+            <!--有效分-->
+            <!--有效分-->
+<div class="analy-lay-item mt30 j_output-excel-block">
+    <h4 class="head text-primary">
+        <b>有效分</b>
+        <a class="output-excel disabled" href="javascript:;"><i class="iconfont">&#xe600;</i>导出Excel表格</a>
+    </h4>
+    <div class="item-body pt20">
+        <table class="item-table-info table-fixed table table-bordered pct100" id="j_youxiaofen">
+            <tr>
+                <td>
+                    <p class="loading"></p>
+                </td>
+            </tr>
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="2"><b>分析指标</b></th>-->
+                <!--<th><b>语文</b></th>-->
+                <!--<th><b>数学</b></th>-->
+                <!--<th><b>英语</b></th>-->
+                <!--<th><b>物理</b></th>-->
+                <!--<th><b>化学</b></th>-->
+                <!--<th class="text-danger fw6"><b>生物</b></th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--&lt;!&ndash;一本&ndash;&gt;-->
+            <!--<tr>-->
+                <!--<td rowspan="6">-->
+                    <!--<b class="dib tl">-->
+                        <!--<span class="dib f16 mb5">一本</span>-->
+                        <!--<br/>-->
+                        <!--分数线（600）-->
+                        <!--<br/>-->
+                        <!--上线人数（100）-->
+                        <!--<br/>-->
+                        <!--上线比例（0.1%）-->
+                        <!--<br/>-->
+                        <!--等级（A）-->
+                    <!--</b></td>-->
+                <!--<td><b>有效分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>单上线人数</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>双上线人数</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>命中率</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>贡献率</b></td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td class="text-danger fw6">0.1%</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>贡献等级</b></td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td class="text-danger fw6">A</td>-->
+            <!--</tr>-->
+
+            <!--&lt;!&ndash;二本&ndash;&gt;-->
+
+            <!--<tr>-->
+                <!--<td rowspan="6">-->
+                    <!--<b class="dib tl">-->
+                        <!--<span class="dib f16 mb5">二本</span>-->
+                        <!--<br/>-->
+                        <!--分数线（600）-->
+                        <!--<br/>-->
+                        <!--上线人数（100）-->
+                        <!--<br/>-->
+                        <!--上线比例（0.1%）-->
+                        <!--<br/>-->
+                        <!--等级（A）-->
+                    <!--</b></td>-->
+                <!--<td><b>有效分</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>单上线人数</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>双上线人数</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>命中率</b></td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td>10</td>-->
+                <!--<td>100</td>-->
+                <!--<td class="text-danger fw6">10</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>贡献率</b></td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td>0.1%</td>-->
+                <!--<td class="text-danger fw6">0.1%</td>-->
+            <!--</tr><tr>-->
+                <!--<td><b>贡献等级</b></td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td>A</td>-->
+                <!--<td class="text-danger fw6">A</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        </table>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="sidebar-tool-wrap">
+    <div class="sidebar-tool">
+        <ul class="func-list">
+            <li class="item1">
+                <a href="javascript:;"><span class="tips-title">在线<br/>客服</span></a>
+                <div class="service-tell">
+                    <div class="icon">客服电话</div>
+                    <p><b>400-0371-657</b></p>
+                </div>
+            </li>
+            <li class="item2"><a href="javascript:;" id="feedback"><span class="tips-title">用户<br/>反馈</span></a></li>
+            <li class="item3">
+                <a href="javascript:;"><span class="tips-title">下载<br/>体验</span></a>
+                <div class="show-ewm clearfix">
+                    <ul class="app-ewm">
+                        <li>
+                            <img src="/Public/static/analy/img/sidebar/ewm.png" alt="安卓版下载"/>
+                            <p>Android下载</p>
+                        </li>
+                        <li>
+                            <img src="/Public/static/analy/img/sidebar/ewm.png" alt="IOS版下载"/>
+                            <p>IOS下载</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item4" id="goTop"><a href="#"><span class="tips-title" >返回<br/>顶部</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="footer-wrap">
+    <div class="footer content">
+        <div class="copyright">
+    <span class="arial">© </span> 2016 河南天星教育传媒股份有限公司 <a href="http://www.wln100.com">wln100.com</a> All rights reserved
+    <a id="anbei" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41019702002013">豫公网安备 41019702002013号</a>
+    <br>
+    <a href="http://www.miitbeian.gov.cn/">增值电信业务经营许可证：豫B2-20130009</a>
+</div>
+        <div class="anquan" style="display:none">
+    <a target="_blank" key="56569cbdefbfb058f9d81d7e" logo_size="83x30" logo_type="business" href="http://www.anquan.org/authenticate/cert/?site=www.wln100.com&amp;at=business">
+        <img alt="安全联盟认证" style="border: medium none;" src="http://static.anquan.org/static/outer/image/hy_83x30.png" height="30" width="83"></a>
+</div>
+    </div>
+</div>
+<script type="text/javascript" src="/Public/static/sea.js"></script>
+<script type="text/javascript" src="/Public/static/seajs_config.js"></script>
+<script type="text/javascript">
+    seajs.use( "/Public/static/" + OP_CONF.modu +"/js/"+ OP_CONF.page);
+</script>
+</body>
+</html>

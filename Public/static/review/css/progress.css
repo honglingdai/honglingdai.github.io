@@ -1,0 +1,180 @@
+.exam-detail .content-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.exam-detail .ed-content {
+  padding-left: 316px;
+}
+.exam-detail .ed-left {
+  width: 260px;
+  float: left;
+  border: 1px solid #bfbfbf;
+  padding: 18px;
+  margin-left: -316px;
+}
+.exam-detail .ed-left .ed-l-title {
+  color: #1499d2;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  padding-left: 5px;
+}
+.exam-detail .ed-left .select-subject {
+  width: 100%;
+  font-size: 16px;
+  background-color: #e8f6fc;
+  height: 40px;
+  border: 0;
+}
+.exam-detail .ed-left .select-subject:focus {
+  box-shadow: none;
+}
+.exam-detail .ed-left .select-subject option {
+  background-color: #fff;
+  font-size: 14px;
+}
+.exam-detail .ed-left .ed-desc-info li {
+  padding: 6px;
+}
+.exam-detail .ed-left .ed-desc-info li:hover {
+  background-color: #dff2fa;
+}
+.exam-detail .ed-right .echart-item {
+  padding: 15px 18px;
+  border: 1px solid #bfbfbf;
+}
+.exam-detail .ed-right .echart-item .echart {
+  height: 240px;
+}
+.exam-detail .ed-right .echart-item .progress {
+  padding: 50px 0;
+}
+.prog-bg {
+  background-color: #dedede;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.prog {
+  position: relative;
+  height: 24px;
+  padding: 8px;
+  border: 1px solid #f2f2f2;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.prog .bar {
+  height: 22px;
+  -webkit-transition: width 0.8s ease;
+  -o-transition: width 0.8s ease;
+  transition: width 0.8s ease;
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 10px 10px;
+}
+.prog .bar .ttip {
+  position: absolute;
+  padding: 8px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  text-align: center;
+  min-width: 100px;
+  line-height: 1;
+  color: #fff;
+  background-color: #f66606;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
+}
+.prog .bar .ttip .ttip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  margin-left: -4px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 7px;
+}
+.prog .bar .ttip.top {
+  left: 0;
+  bottom: 44px;
+  background-color: #1499d2;
+}
+.prog .bar .ttip.top .ttip-arrow {
+  bottom: -13px;
+  border-top-color: #1499d2;
+}
+.prog .bar .ttip.bottom {
+  left: 0;
+  top: 44px;
+}
+.prog .bar .ttip.bottom .ttip-arrow {
+  position: absolute;
+  top: -13px;
+  border-bottom-color: #f66606;
+}
+.prog .bar.active {
+  -webkit-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
+}
+.prog .bar.scan {
+  position: relative;
+  height: 24px;
+  background-color: #076189;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.prog .bar .success {
+  position: relative;
+  background-color: #f66606;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+#examProgressInfo .prog {
+  margin-right: 120px;
+}
+#examProgressInfo .prog .stu-total {
+  float: right;
+  width: 120px;
+  margin-right: -135px;
+  line-height: 24px;
+  font-size: 12px;
+}
+@-webkit-keyframes progress-bar {
+  from {
+    background-position: 10px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar {
+  from {
+    background-position: 10px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@media (max-width: 991px) {
+  .exam-detail .ed-content {
+    padding-left: 0;
+  }
+  .exam-detail .ed-left {
+    float: none;
+    width: auto;
+    padding: 10px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .exam-detail .ed-left .ed-l-title {
+    padding-bottom: 10px;
+  }
+  .exam-detail .ed-right {
+    float: none;
+  }
+  .exam-detail .ed-right .echart-item {
+    padding: 10px;
+  }
+  .exam-detail .panel-content {
+    padding: 10px 0;
+  }
+}

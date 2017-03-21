@@ -1,0 +1,32 @@
+.paper-temp .title {
+  padding: 50px 0 30px;
+  text-align: center;
+  color: #1499d2;
+}
+.paper-temp .panel-site {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+.paper-temp .panel-site h3 {
+  padding: 7px 10px;
+  color: #1499d2;
+  font-size: 16px;
+  background-color: #dff2fa;
+  margin: -1px;
+}
+.paper-temp .panel-site.current {
+  border-color: #1499d2;
+  box-shadow: none;
+}
+.paper-temp .panel-site.current h3 {
+  background-color: #1499d2;
+  color: #fff;
+}
+.paper-temp .panel-body .pc-item {
+  padding: 5px 0;
+}
+.paper-temp .panel-body .hr {
+  border-bottom: 1px dashed #1499d2;
+  height: 0;
+  margin: 10px 0;
+}
